@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ListGamesFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.e1.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.e1.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/AddGameFragment"
+        android:name="com.example.e1.AddGameFragment"
+        android:label="AddGameFragment"
+        tools:layout="@layout/fragment_add_game">
+
+        <action
+            android:id="@+id/action_AddGameFragment_to_ListGamesFragment"
+            app:destination="@id/ListGamesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ListGamesFragment"
+        android:name="com.example.e1.ListGamesFragment"
+        android:label="ListGamesFragment"
+        tools:layout="@layout/fragment_list_games">
+
+        <action
+            android:id="@+id/action_ListGamesFragment_to_AddGameFragment"
+            app:destination="@id/AddGameFragment" />
+    </fragment>
+</navigation>
